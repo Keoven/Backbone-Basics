@@ -10,10 +10,14 @@
 
 <% @pictures.each do |picture| %>
   <tr>
-    <td><%= picture.url %></td>
-    <td><%= link_to 'Show', picture %></td>
+    <td class="picture2">
+      <%= picture.url %>
+    </td>
+    <td class="picture"><%= link_to 'Show', picture %></td>
     <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-    <td><%= link_to 'Destroy', picture, confirm: 'Are you sure?', method: :delete %></td>
+    <td>
+      <%= link_to 'Destroy', picture, confirm: 'Are you sure?', method: :delete %>
+    </td>
   </tr>
 <% end %>
 </table>

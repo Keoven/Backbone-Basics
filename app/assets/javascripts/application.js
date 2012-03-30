@@ -12,4 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require backbone-rails
 //= require_tree .
+//= require_self
+
+var root = this;
+
+$(function() {
+  root.mainRouter = new MainRouter();
+  Backbone.history.start();
+});
